@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #efe8d3; }
+  a { color: #c86b2a; }
+  a:hover { color: #a4521c; }
+</style>
+</helmet>
+<div style="background: #efe8d3; color: #2f2b26; font-family: Karla, system-ui, sans-serif;">
+  <dc-import name="SiteHeader" active="Quem Somos" hint-size="100%,84px"></dc-import>
+
+  <section style="padding: 20px 24px 0;">
+    <div style="position: relative; max-width: 1240px; margin: 0 auto; background: #07232b; border-radius: 40px; overflow: hidden;">
+      <div style="position: absolute; inset: 0; color: #efe8d3;"><image-slot id="qs-hero" shape="rect" placeholder="Foto da igreja ou congregação (16:9)"></image-slot></div>
+      <div style="position: absolute; inset: 0; background: linear-gradient(100deg, rgba(7,35,43,0.86) 0%, rgba(7,35,43,0.62) 55%, rgba(7,35,43,0.24) 100%); pointer-events: none;"></div>
+      <div style="position: relative; padding: clamp(56px, 11vw, 96px) clamp(24px, 6vw, 64px) clamp(64px, 12vw, 104px); pointer-events: none;">
+      <span style="display: block; font-family: Archivo, sans-serif; font-size: 12.5px; letter-spacing: 0.22em; text-transform: uppercase; color: #e79a5e; margin-bottom: 20px;">Quem Somos</span>
+      <h1 style="font-family: Archivo, sans-serif; font-weight: 800; font-size: clamp(42px, 5.2vw, 74px); line-height: 0.98; letter-spacing: -0.04em; color: #efe8d3; margin: 0 0 24px; max-width: 18ch;">Identidade, teologia e história</h1>
+      <p style="font-size: 19px; line-height: 1.7; color: #cfc6ad; margin: 0; max-width: 60ch;">Para quem quer conhecer a IPIB em profundidade: o que cremos, de onde viemos e como isso molda a vida da igreja em São João da Boa Vista.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #efe8d3;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 80px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px;">
+      <div style="background: #fffdf7; border: 1px solid rgba(7,35,43,0.09); border-radius: 24px; padding: 40px 36px;">
+        <h2 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 24px; color: #c86b2a; margin: 0 0 16px;">Missão</h2>
+        <p style="margin: 0; font-size: 17px; line-height: 1.75; color: #4a463f;">Fazer discípulos de Cristo que vivam em comunhão, cresçam em maturidade espiritual e multipliquem o Reino de Deus, influenciando a sociedade com o amor e a verdade do Evangelho.</p>
+      </div>
+      <div style="background: #fffdf7; border: 1px solid rgba(7,35,43,0.09); border-radius: 24px; padding: 40px 36px;">
+        <h2 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 24px; color: #c86b2a; margin: 0 0 16px;">Visão</h2>
+        <p style="margin: 0; font-size: 17px; line-height: 1.75; color: #4a463f;">Ser uma igreja vibrante e acolhedora, fundamentada na Palavra de Deus e no discipulado intencional, onde células são comunidades de transformação espiritual, integração familiar e impacto social.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #f6f0df;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 80px 24px;">
+      <span style="display: inline-block; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #c86b2a; border: 1px solid rgba(200,107,42,0.4); border-radius: 999px; padding: 7px 15px; margin-bottom: 22px;">Dez valores</span>
+      <h2 style="font-family: Archivo, sans-serif; font-weight: 800; font-size: clamp(30px, 3.3vw, 46px); line-height: 1.02; color: #07232b; margin: 0 0 44px; letter-spacing: -0.035em;">O que nos orienta</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 0 56px;">
+        <div style="flex: 1 1 320px; display: flex; flex-direction: column;">
+        <div style="display: flex; gap: 20px; padding: 24px 0; border-top: 1px solid rgba(7,35,43,0.14);">
+          <span style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #c86b2a; padding-top: 4px; min-width: 26px;">01</span>
+          <div><h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 18px; color: #07232b; margin: 0 0 6px;">Cristocentrismo</h3><p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #4a463f;">Cristo é centro em tudo. <em style="color:#6d675c;">Cl 1.18</em></p></div>
+        </div>
+        <div style="display: flex; gap: 20px; padding: 24px 0; border-top: 1px solid rgba(7,35,43,0.14);">
+          <span style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #c86b2a; padding-top: 4px; min-width: 26px;">02</span>
+          <div><h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 18px; color: #07232b; margin: 0 0 6px;">Discipulado Relacional</h3><p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #4a463f;">Transformação por relacionamentos. <em style="color:#6d675c;">2Tm 2.2</em></p></div>
+        </div>
+        <div style="display: flex; gap: 20px; padding: 24px 0; border-top: 1px solid rgba(7,35,43,0.14);">
+          <span style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #c86b2a; padding-top: 4px; min-width: 26px;">03</span>
+          <div><h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 18px; color: #07232b; margin: 0 0 6px;">Comunhão e Unidade</h3><p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #4a463f;">Vida compartilhada. <em style="color:#6d675c;">At 2.42-47</em></p></div>
+        </div>
+        <div style="display: flex; gap: 20px; padding: 24px 0; border-top: 1px solid rgba(7,35,43,0.14);">
+          <span style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #c86b2a; padding-top: 4px; min-width: 26px;">04</span>
+          <div><h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 18px; color: #07232b; margin: 0 0 6px;">Evangelismo e Multiplicação</h3><p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #4a463f;">Alcançar e expandir o Reino. <em style="color:#6d675c;">Mt 28.19-20</em></p></div>
+        </div>
+        <div style="display: flex; gap: 20px; padding: 24px 0; border-top: 1px solid rgba(7,35,43,0.14);">
+          <span style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #c86b2a; padding-top: 4px; min-width: 26px;">05</span>
+          <div><h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 18px; color: #07232b; margin: 0 0 6px;">Famílias Fortes</h3><p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #4a463f;">Base para a igreja e a sociedade. <em style="color:#6d675c;">Ef 6.1-4</em></p></div>
+        </div>
+        </div>
+        <div style="flex: 1 1 320px; display: flex; flex-direction: column;">
+        <div style="display: flex; gap: 20px; padding: 24px 0; border-top: 1px solid rgba(7,35,43,0.14);">
+          <span style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #c86b2a; padding-top: 4px; min-width: 26px;">06</span>
+          <div><h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 18px; color: #07232b; margin: 0 0 6px;">Transformação da Comunidade</h3><p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #4a463f;">Influência e testemunho. <em style="color:#6d675c;">Mt 5.13-16</em></p></div>
+        </div>
+        <div style="display: flex; gap: 20px; padding: 24px 0; border-top: 1px solid rgba(7,35,43,0.14);">
+          <span style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #c86b2a; padding-top: 4px; min-width: 26px;">07</span>
+          <div><h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 18px; color: #07232b; margin: 0 0 6px;">Oração e Dependência</h3><p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #4a463f;">Fundamento da ação. <em style="color:#6d675c;">1Ts 5.17</em></p></div>
+        </div>
+        <div style="display: flex; gap: 20px; padding: 24px 0; border-top: 1px solid rgba(7,35,43,0.14);">
+          <span style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #c86b2a; padding-top: 4px; min-width: 26px;">08</span>
+          <div><h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 18px; color: #07232b; margin: 0 0 6px;">Excelência e Serviço</h3><p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #4a463f;">Dedicação ao servir. <em style="color:#6d675c;">Cl 3.23</em></p></div>
+        </div>
+        <div style="display: flex; gap: 20px; padding: 24px 0; border-top: 1px solid rgba(7,35,43,0.14); border-bottom: 1px solid rgba(7,35,43,0.14);">
+          <span style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #c86b2a; padding-top: 4px; min-width: 26px;">09</span>
+          <div><h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 18px; color: #07232b; margin: 0 0 6px;">Fidelidade Bíblica</h3><p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #4a463f;">A Escritura como autoridade. <em style="color:#6d675c;">2Tm 3.16-17</em></p></div>
+        </div>
+        <div style="display: flex; gap: 20px; padding: 24px 0; border-top: 1px solid rgba(7,35,43,0.14); border-bottom: 1px solid rgba(7,35,43,0.14);">
+          <span style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #c86b2a; padding-top: 4px; min-width: 26px;">10</span>
+          <div><h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 18px; color: #07232b; margin: 0 0 6px;">Gratidão e Celebração</h3><p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #4a463f;">Reconhecer a graça. <em style="color:#6d675c;">Sl 100.4</em></p></div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #efe8d3;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 80px 24px;">
+      <span style="display: inline-block; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #c86b2a; border: 1px solid rgba(200,107,42,0.4); border-radius: 999px; padding: 7px 15px; margin-bottom: 22px;">Quatro pilares</span>
+      <h2 style="font-family: Archivo, sans-serif; font-weight: 800; font-size: clamp(30px, 3.3vw, 46px); line-height: 1.02; color: #07232b; margin: 0 0 44px; letter-spacing: -0.035em;">Nossa identidade</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+        <div style="background: #fffdf7; border-radius: 32px; padding: 36px 32px;">
+          <h3 style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 26px; color: #07232b; margin: 0 0 14px;">Somos Bíblicos</h3>
+          <p style="margin: 0; font-size: 16.5px; line-height: 1.75; color: #4a463f;">A Palavra de Deus é a autoridade final. Experiências reais com Deus, fundamentadas nas Escrituras.</p>
+        </div>
+        <div style="background: #fffdf7; border-radius: 32px; padding: 36px 32px;">
+          <h3 style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 26px; color: #07232b; margin: 0 0 14px;">Somos Contemporâneos</h3>
+          <p style="margin: 0; font-size: 16.5px; line-height: 1.75; color: #4a463f;">Fé viva que dialoga com tecnologia, política e crises. Não vivemos isolados do mundo.</p>
+        </div>
+        <div style="background: #fffdf7; border-radius: 32px; padding: 36px 32px;">
+          <h3 style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 26px; color: #07232b; margin: 0 0 14px;">Somos Familiares</h3>
+          <p style="margin: 0; font-size: 16.5px; line-height: 1.75; color: #4a463f;">Igreja para toda a família. Crianças recebem alimento real, não entretenimento. Você não assiste — você participa.</p>
+        </div>
+        <div style="background: #fffdf7; border-radius: 32px; padding: 36px 32px;">
+          <h3 style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 26px; color: #07232b; margin: 0 0 14px;">Somos Ativos</h3>
+          <p style="margin: 0; font-size: 16.5px; line-height: 1.75; color: #4a463f;">Transformação real na comunidade. Ações sociais, proclamação e testemunho íntegro que faz diferença.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 0 24px 20px;">
+    <div style="max-width: 1240px; margin: 0 auto; background: #07232b; border-radius: 40px; padding: clamp(36px, 8vw, 84px) clamp(24px, 6vw, 64px);">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(32px, 6vw, 64px); align-items: start;">
+        <div>
+          <span style="display: inline-block; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #efe8d3; border: 1px solid rgba(239,232,211,0.35); border-radius: 999px; padding: 7px 15px; margin-bottom: 26px;">Contexto denominacional</span>
+          <h2 style="font-family: Archivo, sans-serif; font-weight: 800; font-size: clamp(32px, 3.6vw, 50px); line-height: 1.02; color: #efe8d3; margin: 0 0 32px; letter-spacing: -0.035em; max-width: 20ch;">Quem é a Igreja Presbiteriana Independente do Brasil</h2>
+          <div style="display: flex; flex-direction: column; gap: 28px;">
+            <div style="border-top: 1px solid rgba(239,232,211,0.2); padding-top: 22px;">
+              <h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 19px; color: #e79a5e; margin: 0 0 10px;">Origem</h3>
+              <p style="margin: 0; font-size: 16.5px; line-height: 1.75; color: #cfc6ad;">Denominação protestante reformada (calvinista), fundada em 31 de julho de 1903 pelo Rev. Eduardo Carlos Pereira e outros líderes nacionalistas que sonhavam com uma Igreja totalmente brasileira, sem dependência estrangeira.</p>
+            </div>
+            <div style="border-top: 1px solid rgba(239,232,211,0.2); padding-top: 22px;">
+              <h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 19px; color: #e79a5e; margin: 0 0 10px;">História</h3>
+              <p style="margin: 0; font-size: 16.5px; line-height: 1.75; color: #cfc6ad;">Ganhou o apelido de “Igrejinha dos milagres” pelos milagres de salvação. Hoje reúne cerca de 550 igrejas e 91 mil membros — a terceira maior denominação presbiteriana do Brasil.</p>
+            </div>
+            <div style="border-top: 1px solid rgba(239,232,211,0.2); padding-top: 22px;">
+              <h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 19px; color: #e79a5e; margin: 0 0 10px;">Teologia reformada</h3>
+              <p style="margin: 0; font-size: 16.5px; line-height: 1.75; color: #cfc6ad;">Raízes na Reforma do século XVI. Soberania de Deus e responsabilidade humana (compatibilismo), com fidelidade às Escrituras.</p>
+            </div>
+            <div style="border-top: 1px solid rgba(239,232,211,0.2); padding-top: 22px;">
+              <h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 19px; color: #e79a5e; margin: 0 0 10px;">Musicalidade</h3>
+              <p style="margin: 0; font-size: 16.5px; line-height: 1.75; color: #cfc6ad;">Hinário “Cantai Todos os Povos”, com hinos clássicos e contemporâneos. Órgão e piano convivem com guitarra e bateria: cultos tradicionais e contemporâneos coexistem.</p>
+            </div>
+            <div style="border-top: 1px solid rgba(239,232,211,0.2); padding-top: 22px;">
+              <h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 19px; color: #e79a5e; margin: 0 0 10px;">Publicações</h3>
+              <p style="margin: 0; font-size: 16.5px; line-height: 1.75; color: #cfc6ad;">Jornal “O Estandarte”, publicado desde 1893, e a Editora Pendão Real. Mais em <a href="https://www.ipib.org.br" style="color: #efe8d3;">www.ipib.org.br</a>.</p>
+            </div>
+          </div>
+        </div>
+        <div style="position: relative; min-width: 0; overflow: hidden; height: clamp(320px, 60vw, 560px);">
+          <image-slot id="qs-historia" shape="rounded" radius="30" placeholder="Foto histórica ou do templo (3:4)"></image-slot>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+
+</x-dc>
+</body>
+</html>

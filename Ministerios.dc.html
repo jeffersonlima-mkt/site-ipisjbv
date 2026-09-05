@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #efe8d3; }
+  a { color: #c86b2a; }
+  a:hover { color: #a4521c; }
+  details > summary { list-style: none; }
+  details > summary::-webkit-details-marker { display: none; }
+  details > summary::after { content: "+"; float: right; color: #c86b2a; font-weight: 600; }
+  details[open] > summary::after { content: "–"; }
+</style>
+</helmet>
+<div style="background: #efe8d3; color: #2f2b26; font-family: Karla, system-ui, sans-serif;">
+  <dc-import name="SiteHeader" active="Ministérios" hint-size="100%,84px"></dc-import>
+
+  <section style="position: relative; background: #07232b; overflow: hidden; border-radius: 40px; margin: 20px 24px 0;">
+    <div style="position: absolute; inset: 0;"><image-slot id="min-hero" shape="rect" placeholder="Foto de ministério em ação (16:9)"></image-slot></div>
+    <div style="position: absolute; inset: 0; background: linear-gradient(100deg, rgba(7,35,43,0.94) 0%, rgba(7,35,43,0.7) 55%, rgba(7,35,43,0.2) 100%); pointer-events: none;"></div>
+    <div style="position: relative; padding: clamp(56px, 11vw, 96px) clamp(24px, 6vw, 64px) clamp(56px, 11vw, 96px); pointer-events: none;">
+        <span style="display: inline-block; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #efe8d3; border: 1px solid rgba(239,232,211,0.35); border-radius: 999px; padding: 7px 15px; margin-bottom: 26px;">Ministérios</span>
+        <h1 style="font-family: Archivo, sans-serif; font-weight: 800; font-size: clamp(42px, 5.2vw, 74px); line-height: 0.98; letter-spacing: -0.04em; color: #efe8d3; margin: 0 0 20px; max-width: 16ch;">Cada membro é chamado a servir</h1>
+        <p style="font-size: 18.5px; line-height: 1.7; color: #d8d0b9; margin: 0; max-width: 52ch;">Onze ministérios ativos em São João da Boa Vista. Todos têm dons — há lugar para você.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #efe8d3;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 80px 24px;">
+      <div style="max-width: 760px; margin: 0 auto;">
+        <h2 style="font-family: Archivo, sans-serif; font-weight: 800; font-size: clamp(28px, 3vw, 40px); line-height: 1.05; color: #07232b; margin: 0 0 32px; letter-spacing: -0.035em; text-align: center;">Conheça cada departamento</h2>
+        <details style="background: #fffdf7; border-radius: 24px; padding: 24px 26px; margin-bottom: 12px;">
+          <summary style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 19px; color: #07232b; cursor: pointer;">Acolhimento</summary>
+          <p style="margin: 16px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Recebe visitantes na entrada, oferece café e água, e apresenta a igreja a quem chega por ela pela primeira vez. É o primeiro contato de quem visita a IPIB.</p>
+          <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Serve bem aqui quem gosta de gente, tem boa memória para nomes e rostos, e transmite calor humano com naturalidade. Pontualidade e disponibilidade para chegar mais cedo ao culto são importantes.</p>
+          <a href="Contato.dc.html#servir=Acolhimento" style="display: block; width: fit-content; margin: 16px auto 0; font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #c86b2a; text-decoration: none; border-bottom: 1px solid rgba(200,107,42,0.4); padding-bottom: 2px;" style-hover="color: #a4521c; border-bottom-color: #a4521c;">Servir aqui</a>
+        </details>
+        <details style="background: #fffdf7; border-radius: 24px; padding: 24px 26px; margin-bottom: 12px;">
+          <summary style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 19px; color: #07232b; cursor: pointer;">Ação Social</summary>
+          <p style="margin: 16px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Organiza campanhas de arrecadação de alimentos e roupas, e coordena o cuidado prático com idosos, famílias em dificuldade e outras pessoas vulneráveis da comunidade.</p>
+          <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Pede disposição para atividades práticas (triagem, distribuição, visitas) e sensibilidade com quem está passando por necessidade. Trabalho em equipe é essencial — a maior parte das ações é coletiva.</p>
+          <a href="Contato.dc.html#servir=A%C3%A7%C3%A3o%20Social" style="display: block; width: fit-content; margin: 16px auto 0; font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #c86b2a; text-decoration: none; border-bottom: 1px solid rgba(200,107,42,0.4); padding-bottom: 2px;" style-hover="color: #a4521c; border-bottom-color: #a4521c;">Servir aqui</a>
+        </details>
+        <details style="background: #fffdf7; border-radius: 24px; padding: 24px 26px; margin-bottom: 12px;">
+          <summary style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 19px; color: #07232b; cursor: pointer;">Adolescentes e Jovens</summary>
+          <p style="margin: 16px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Cuida da liderança, do discipulado e da vida em comunidade de adolescentes e jovens entre 13 e 25 anos, por meio de encontros semanais, acampamentos e grupos de estudo.</p>
+          <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Pede afinidade com esse público e disposição para investir tempo além dos encontros — mensagens, apoio em momentos pessoais. Maturidade espiritual e bom testemunho de vida são critérios mínimos, já que há influência direta sobre jovens.</p>
+          <a href="Contato.dc.html#servir=Adolescentes%20e%20Jovens" style="display: block; width: fit-content; margin: 16px auto 0; font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #c86b2a; text-decoration: none; border-bottom: 1px solid rgba(200,107,42,0.4); padding-bottom: 2px;" style-hover="color: #a4521c; border-bottom-color: #a4521c;">Servir aqui</a>
+        </details>
+        <details style="background: #fffdf7; border-radius: 24px; padding: 24px 26px; margin-bottom: 12px;">
+          <summary style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 19px; color: #07232b; cursor: pointer;">Casais</summary>
+          <p style="margin: 16px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Fortalece casamentos à luz da Palavra por meio de grupos de convivência, retiros e mentorias entre casais mais experientes e casais mais novos na fé ou no casamento.</p>
+          <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">É voltado a casais casados que vivem um casamento saudável e estão dispostos a compartilhar sua própria caminhada com humildade — sem pretender ser um casamento perfeito, apenas um exemplo honesto.</p>
+          <a href="Contato.dc.html#servir=Casais" style="display: block; width: fit-content; margin: 16px auto 0; font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #c86b2a; text-decoration: none; border-bottom: 1px solid rgba(200,107,42,0.4); padding-bottom: 2px;" style-hover="color: #a4521c; border-bottom-color: #a4521c;">Servir aqui</a>
+        </details>
+        <details style="background: #fffdf7; border-radius: 24px; padding: 24px 26px; margin-bottom: 12px;">
+          <summary style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 19px; color: #07232b; cursor: pointer;">Células</summary>
+          <p style="margin: 16px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">É o coração da vida comunitária da igreja: coordena a rede de células, treina os líderes de cada grupo e pastoreia de perto quem lidera essas pequenas comunidades.</p>
+          <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Pede experiência prévia em célula (como membro ou líder) e disposição para acompanhar de perto outras pessoas. Constância e discrição no cuidado pastoral são essenciais.</p>
+          <a href="Contato.dc.html#servir=C%C3%A9lulas" style="display: block; width: fit-content; margin: 16px auto 0; font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #c86b2a; text-decoration: none; border-bottom: 1px solid rgba(200,107,42,0.4); padding-bottom: 2px;" style-hover="color: #a4521c; border-bottom-color: #a4521c;">Servir aqui</a>
+        </details>
+        <details style="background: #fffdf7; border-radius: 24px; padding: 24px 26px; margin-bottom: 12px;">
+          <summary style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 19px; color: #07232b; cursor: pointer;">Ensino / EBD (Escola Bíblica Dominical)</summary>
+          <p style="margin: 16px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Prepara e conduz as aulas de Escola Bíblica Dominical aos domingos, às 9h30, para turmas de crianças, adolescentes e adultos.</p>
+          <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Pede gosto por estudar e ensinar a Palavra com clareza, e disposição para preparar a aula com antecedência. Não é preciso ser especialista em teologia — apenas disposto a aprender e comunicar bem.</p>
+          <a href="Contato.dc.html#servir=Ensino%20%2F%20EBD%20(Escola%20B%C3%ADblica%20Dominical)" style="display: block; width: fit-content; margin: 16px auto 0; font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #c86b2a; text-decoration: none; border-bottom: 1px solid rgba(200,107,42,0.4); padding-bottom: 2px;" style-hover="color: #a4521c; border-bottom-color: #a4521c;">Servir aqui</a>
+        </details>
+        <details style="background: #fffdf7; border-radius: 24px; padding: 24px 26px; margin-bottom: 12px;">
+          <summary style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 19px; color: #07232b; cursor: pointer;">Infantil</summary>
+          <p style="margin: 16px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Cuida da fé das crianças de 0 a 12 anos por meio de culto infantil, EBD (Escola Bíblica Dominical) e atividades temáticas, sempre na linguagem apropriada a cada idade.</p>
+          <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Pede paciência, energia para lidar com crianças e um coração genuíno pelo cuidado infantil. Por envolver menores, é necessário bom testemunho de vida e disponibilidade para os horários dos cultos.</p>
+          <a href="Contato.dc.html#servir=Infantil" style="display: block; width: fit-content; margin: 16px auto 0; font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #c86b2a; text-decoration: none; border-bottom: 1px solid rgba(200,107,42,0.4); padding-bottom: 2px;" style-hover="color: #a4521c; border-bottom-color: #a4521c;">Servir aqui</a>
+        </details>
+        <details style="background: #fffdf7; border-radius: 24px; padding: 24px 26px; margin-bottom: 12px;">
+          <summary style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 19px; color: #07232b; cursor: pointer;">Mídia</summary>
+          <p style="margin: 16px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Responsável pela comunicação visual da igreja, redes sociais, transmissão online dos cultos, design de materiais e produção de vídeos.</p>
+          <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Pede alguma familiaridade com ferramentas de imagem, vídeo ou redes sociais — não precisa ser profissional, mas disposto a aprender. Constância é importante, já que a transmissão acontece toda semana.</p>
+          <a href="Contato.dc.html#servir=M%C3%ADdia" style="display: block; width: fit-content; margin: 16px auto 0; font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #c86b2a; text-decoration: none; border-bottom: 1px solid rgba(200,107,42,0.4); padding-bottom: 2px;" style-hover="color: #a4521c; border-bottom-color: #a4521c;">Servir aqui</a>
+        </details>
+        <details style="background: #fffdf7; border-radius: 24px; padding: 24px 26px; margin-bottom: 12px;">
+          <summary style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 19px; color: #07232b; cursor: pointer;">Música</summary>
+          <p style="margin: 16px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Conduz o louvor nos cultos por meio do coral, dos instrumentistas e dos cantores, cuidando para que a música aponte sempre para Deus.</p>
+          <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Pede habilidade musical mínima (canto ou instrumento) e disposição para os ensaios semanais. Reverência e humildade importam mais do que talento — música aqui é serviço, não performance.</p>
+          <a href="Contato.dc.html#servir=M%C3%BAsica" style="display: block; width: fit-content; margin: 16px auto 0; font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #c86b2a; text-decoration: none; border-bottom: 1px solid rgba(200,107,42,0.4); padding-bottom: 2px;" style-hover="color: #a4521c; border-bottom-color: #a4521c;">Servir aqui</a>
+        </details>
+        <details style="background: #fffdf7; border-radius: 24px; padding: 24px 26px; margin-bottom: 12px;">
+          <summary style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 19px; color: #07232b; cursor: pointer;">Obras</summary>
+          <p style="margin: 16px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Cuida da manutenção do prédio da igreja, dos equipamentos, da limpeza e da organização geral dos espaços — uma casa digna para se orar.</p>
+          <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Pede disposição para trabalho manual e prático, e atenção a detalhes de manutenção. Não exige habilidade técnica avançada, apenas boa vontade e regularidade.</p>
+          <a href="Contato.dc.html#servir=Obras" style="display: block; width: fit-content; margin: 16px auto 0; font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #c86b2a; text-decoration: none; border-bottom: 1px solid rgba(200,107,42,0.4); padding-bottom: 2px;" style-hover="color: #a4521c; border-bottom-color: #a4521c;">Servir aqui</a>
+        </details>
+        <details style="background: #fffdf7; border-radius: 24px; padding: 24px 26px; margin-bottom: 12px;">
+          <summary style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 19px; color: #07232b; cursor: pointer;">Zeladoria</summary>
+          <p style="margin: 16px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Exerce o cuidado espiritual da igreja: visita enfermos, ora por quem está passando por dificuldade e acompanha famílias em momentos de luto.</p>
+          <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Pede maturidade emocional e espiritual para estar ao lado de quem sofre, discrição e disponibilidade para visitas fora do horário do culto. É um serviço de presença, mais do que de habilidade.</p>
+          <a href="Contato.dc.html#servir=Zeladoria" style="display: block; width: fit-content; margin: 16px auto 0; font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #c86b2a; text-decoration: none; border-bottom: 1px solid rgba(200,107,42,0.4); padding-bottom: 2px;" style-hover="color: #a4521c; border-bottom-color: #a4521c;">Servir aqui</a>
+        </details>
+        <div style="background: #07232b; border-radius: 28px; padding: 44px 40px; margin-top: 28px; text-align: center;">
+          <h2 style="font-family: Archivo, sans-serif; font-weight: 800; font-size: clamp(24px, 2.6vw, 30px); color: #efe8d3; margin: 0 0 14px; letter-spacing: -0.03em;">Não sabe por onde começar?</h2>
+          <p style="margin: 0 auto 26px; max-width: 46ch; font-size: 16.5px; line-height: 1.75; color: #cfc6ad;">Mesmo 1 ou 2 horas por mês ajudam. Converse conosco sobre o que encaixa na sua disponibilidade.</p>
+          <a href="Contato.dc.html" style="display: inline-block; background: #c86b2a; color: #fff; font-family: Archivo, sans-serif; font-weight: 600; font-size: 15px; text-decoration: none; padding: 13px 26px; border-radius: 999px;" style-hover="background: #efe8d3; color: #07232b;">Fale conosco</a>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servir" style="background: #f6f0df;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(40px, 8vw, 84px) 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(32px, 6vw, 64px); align-items: center;">
+      <div>
+        <span style="display: inline-block; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #c86b2a; border: 1px solid rgba(200,107,42,0.4); border-radius: 999px; padding: 7px 15px; margin-bottom: 22px;">Como participar</span>
+        <h2 style="font-family: Archivo, sans-serif; font-weight: 800; font-size: clamp(30px, 3.3vw, 46px); line-height: 1.02; color: #07232b; margin: 0 0 22px; letter-spacing: -0.035em;">Sente-se chamado a servir?</h2>
+        <p style="font-size: 17px; line-height: 1.75; color: #4a463f; margin: 0 0 16px; max-width: 52ch;">Preencha o cadastro indicando seu interesse. Você estará fazendo uma declaração de intenção — a liderança revisará e entrará em contato para alinhar seu interesse com as necessidades atuais.</p>
+        <p style="font-size: 17px; line-height: 1.75; color: #4a463f; margin: 0 0 32px; max-width: 52ch;">Todos têm dons. Há espaço para você.</p>
+        <a href="Contato.dc.html#servir" style="display: inline-block; background: #c86b2a; color: #fff; font-family: Archivo, sans-serif; font-weight: 600; font-size: 15.5px; padding: 16px 30px; border-radius: 999px; text-decoration: none;" style-hover="background: #a4521c; color: #fff;">Cadastre-se para Servir</a>
+      </div>
+      <div style="position: relative; min-width: 0; overflow: hidden; height: clamp(240px, 50vw, 380px);">
+        <image-slot id="min-servir" shape="rounded" radius="30" placeholder="Foto de voluntários servindo (16:9)"></image-slot>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; }
+  a { color: #c86b2a; text-decoration: none; }
+  a:hover { color: #a4521c; }
+</style>
+</helmet>
+<header style="position: sticky; top: 0; z-index: 60; background: #07232b; font-family: Karla, system-ui, sans-serif;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: clamp(12px, 3vw, 18px) clamp(16px, 5vw, 40px); min-height: 84px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 14px clamp(12px, 3vw, 32px); flex-wrap: wrap;">
+    <a href="Inicio.dc.html" style="display: flex; align-items: center; flex: none;">
+      <img src="logo-ipi-branco.png" alt="Presbiteriana Independente" style="height: clamp(32px, 8vw, 42px); width: auto; display: block;">
+    </a>
+    <nav style="display: flex; align-items: center; gap: 10px clamp(10px, 2.4vw, 22px); flex-wrap: wrap; justify-content: flex-end;">
+      <sc-for list="{{ items }}" as="it" hint-placeholder-count="8">
+        <a href="{{ it.href }}" style="{{ it.style }}" style-hover="{{ it.hoverStyle }}">{{ it.label }}</a>
+      </sc-for>
+      <span style="width: 1px; height: 20px; background: transparent; flex: none;"></span>
+    </nav>
+  </div>
+  <div style="height: 1px; background: linear-gradient(to right, rgba(200,107,42,0) 0%, rgba(200,107,42,0.55) 22%, rgba(200,107,42,0.55) 78%, rgba(200,107,42,0) 100%);"></div>
+</header>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;active&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Início&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const nav = [
+      ["Início", "Inicio.dc.html"],
+      ["Quem Somos", "QuemSomos.dc.html"],
+      ["Ministérios", "Ministerios.dc.html"],
+      ["Células", "Celulas.dc.html"],
+      ["Informações", "Informacoes.dc.html"],
+      ["Pastores", "Pastores.dc.html"],
+      ["Blog", "Blog.dc.html"],
+      ["Contato", "Contato.dc.html"]
+    ];
+    const active = this.props.active || "";
+    return {
+      items: nav.map(([label, href]) => {
+        const on = label === active;
+        return {
+          label, href,
+          style: {
+            fontFamily: "Karla, sans-serif",
+            fontSize: "11.5px",
+            fontWeight: 600,
+            textTransform: "uppercase",
+            letterSpacing: "0.14em",
+            color: on ? "#efe8d3" : "rgba(239,232,211,0.62)",
+            textDecoration: "none",
+            paddingBottom: "4px",
+            borderBottom: on ? "1px solid #c86b2a" : "1px solid transparent",
+            whiteSpace: "nowrap",
+            transition: "color 200ms ease, border-color 200ms ease"
+          },
+          hoverStyle: on ? {} : { color: "#efe8d3", borderBottomColor: "rgba(239,232,211,0.35)" }
+        };
+      })
+    };
+  }
+}
+
+</script>
+</body>
+</html>

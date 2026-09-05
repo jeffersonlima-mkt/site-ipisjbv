@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #efe8d3; }
+  a { color: #c86b2a; }
+  a:hover { color: #a4521c; }
+</style>
+</helmet>
+<div style="background: #efe8d3; color: #2f2b26; font-family: Karla, system-ui, sans-serif;">
+  <dc-import name="SiteHeader" active="Células" hint-size="100%,84px"></dc-import>
+
+  <section style="position: relative; background: #07232b; overflow: hidden; border-radius: 40px; margin: 20px 24px 0;">
+    <div style="position: absolute; inset: 0;"><image-slot id="cel-hero" shape="rect" placeholder="Foto de célula em uma casa (16:9)"></image-slot></div>
+    <div style="position: absolute; inset: 0; background: linear-gradient(100deg, rgba(7,35,43,0.94) 0%, rgba(7,35,43,0.7) 55%, rgba(7,35,43,0.2) 100%); pointer-events: none;"></div>
+    <div style="position: relative; padding: clamp(56px, 11vw, 96px) clamp(24px, 6vw, 64px) clamp(56px, 11vw, 96px); pointer-events: none;">
+        <span style="display: inline-block; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #efe8d3; border: 1px solid rgba(239,232,211,0.35); border-radius: 999px; padding: 7px 15px; margin-bottom: 26px;">Células</span>
+        <h1 style="font-family: Archivo, sans-serif; font-weight: 800; font-size: clamp(42px, 5.2vw, 74px); line-height: 0.98; letter-spacing: -0.04em; color: #efe8d3; margin: 0 0 20px; max-width: 17ch;">Comunidade em pequenos grupos</h1>
+        <p style="font-size: 18.5px; line-height: 1.7; color: #d8d0b9; margin: 0; max-width: 54ch;">Se há um coração na IPIB, é aqui. Células não são reuniões de 30 minutos — são comunidades onde pessoas de verdade compartilham vidas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #efe8d3;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 80px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(32px, 6vw, 64px); align-items: start;">
+      <div>
+        <span style="display: inline-block; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #c86b2a; border: 1px solid rgba(200,107,42,0.4); border-radius: 999px; padding: 7px 15px; margin-bottom: 22px;">O que é</span>
+        <h2 style="font-family: Archivo, sans-serif; font-weight: 800; font-size: clamp(30px, 3.3vw, 46px); line-height: 1.02; color: #07232b; margin: 0 0 24px; letter-spacing: -0.035em;">Célula não é um encontro. É uma porção viva do corpo de Cristo.</h2>
+      </div>
+      <div>
+        <p style="font-size: 17.5px; line-height: 1.8; color: #4a463f; margin: 0 0 20px;">Um pequeno grupo de 4 a 12 cristãos que se reúne nas casas durante a semana, por cerca de duas horas, para comunhão real.</p>
+        <p style="font-size: 17.5px; line-height: 1.8; color: #4a463f; margin: 0;">Compartilham alegrias, lutas e dúvidas. Estudam a Bíblia, oram uns pelos outros, visitam enfermos e exercem seus dons.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #f6f0df;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 80px 24px;">
+      <h2 style="font-family: Archivo, sans-serif; font-weight: 800; font-size: clamp(28px, 3vw, 42px); line-height: 1.02; color: #07232b; margin: 0 0 40px; letter-spacing: -0.035em;">Quatro pilares</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 22px;">
+        <div style="background: #fffdf7; border: 1px solid rgba(7,35,43,0.09); border-radius: 24px; padding: 30px 26px;">
+          <h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 19px; color: #c86b2a; margin: 0 0 12px;">Reunidas nas casas</h3>
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #4a463f;">Ambiente informal e acolhedor. Não é palco — é sala de estar.</p>
+        </div>
+        <div style="background: #fffdf7; border: 1px solid rgba(7,35,43,0.09); border-radius: 24px; padding: 30px 26px;">
+          <h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 19px; color: #c86b2a; margin: 0 0 12px;">Comunhão genuína</h3>
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #4a463f;">Vidas compartilhadas, oração mútua, cuidado prático e confrontação amorosa.</p>
+        </div>
+        <div style="background: #fffdf7; border: 1px solid rgba(7,35,43,0.09); border-radius: 24px; padding: 30px 26px;">
+          <h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 19px; color: #c86b2a; margin: 0 0 12px;">Liderança próxima</h3>
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #4a463f;">Líderes pastoreiam de perto. Conhecem nomes, histórias e necessidades.</p>
+        </div>
+        <div style="background: #fffdf7; border: 1px solid rgba(7,35,43,0.09); border-radius: 24px; padding: 30px 26px;">
+          <h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 19px; color: #c86b2a; margin: 0 0 12px;">Alimento espiritual</h3>
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #4a463f;">Estudo prático: como isso muda meu casamento? Como me ajuda no trabalho?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 0 24px 20px;">
+    <div style="max-width: 1240px; margin: 0 auto; background: #07232b; border-radius: 40px; padding: clamp(36px, 8vw, 84px) clamp(24px, 6vw, 64px);">
+      <span style="display: inline-block; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #efe8d3; border: 1px solid rgba(239,232,211,0.35); border-radius: 999px; padding: 7px 15px; margin-bottom: 22px;">Ciclo anual</span>
+      <h2 style="font-family: Archivo, sans-serif; font-weight: 800; font-size: clamp(30px, 3.3vw, 46px); line-height: 1.02; color: #efe8d3; margin: 0 0 48px; letter-spacing: -0.035em;">2026, bimestre a bimestre</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px;">
+        <div style="border-top: 3px solid #c86b2a; padding-top: 22px;">
+          <span style="display: block; font-family: Archivo, sans-serif; font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #e79a5e; margin-bottom: 10px;">Jan — Fev</span>
+          <h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 21px; color: #efe8d3; margin: 0 0 10px;">Capacitar</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #cfc6ad;">Treinamento de líderes, visão compartilhada, consagração.</p>
+        </div>
+        <div style="border-top: 3px solid rgba(200,107,42,0.45); padding-top: 22px;">
+          <span style="display: block; font-family: Archivo, sans-serif; font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #e79a5e; margin-bottom: 10px;">Mar — Abr</span>
+          <h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 21px; color: #efe8d3; margin: 0 0 10px;">Multiplicar</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #cfc6ad;">Novas células lançadas em novas áreas.</p>
+        </div>
+        <div style="border-top: 3px solid rgba(200,107,42,0.45); padding-top: 22px;">
+          <span style="display: block; font-family: Archivo, sans-serif; font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #e79a5e; margin-bottom: 10px;">Mai — Jun</span>
+          <h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 21px; color: #efe8d3; margin: 0 0 10px;">Alcançar</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #cfc6ad;">Evangelismo ativo. As células convidam amigos.</p>
+        </div>
+        <div style="border-top: 3px solid rgba(200,107,42,0.45); padding-top: 22px;">
+          <span style="display: block; font-family: Archivo, sans-serif; font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #e79a5e; margin-bottom: 10px;">Jul — Ago</span>
+          <h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 21px; color: #efe8d3; margin: 0 0 10px;">Integrar</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #cfc6ad;">Acolhimento profundo de novos. Pertencimento.</p>
+        </div>
+        <div style="border-top: 3px solid rgba(200,107,42,0.45); padding-top: 22px;">
+          <span style="display: block; font-family: Archivo, sans-serif; font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #e79a5e; margin-bottom: 10px;">Set — Out</span>
+          <h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 21px; color: #efe8d3; margin: 0 0 10px;">Discipular</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #cfc6ad;">Aprofundamento espiritual e preparação para o batismo.</p>
+        </div>
+        <div style="border-top: 3px solid rgba(200,107,42,0.45); padding-top: 22px;">
+          <span style="display: block; font-family: Archivo, sans-serif; font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #e79a5e; margin-bottom: 10px;">Nov — Dez</span>
+          <h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 21px; color: #efe8d3; margin: 0 0 10px;">Avaliar</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #cfc6ad;">Reflexão de resultados, celebração e planejamento de 2027.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #efe8d3;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(40px, 8vw, 84px) 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(32px, 6vw, 64px); align-items: center;">
+      <div style="position: relative; min-width: 0; overflow: hidden; height: clamp(240px, 50vw, 360px);">
+        <image-slot id="cel-participar" shape="rounded" radius="30" placeholder="Foto de mesa de café / sala (4:3)"></image-slot>
+      </div>
+      <div>
+        <span style="display: inline-block; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #c86b2a; border: 1px solid rgba(200,107,42,0.4); border-radius: 999px; padding: 7px 15px; margin-bottom: 22px;">Como participar</span>
+        <h2 style="font-family: Archivo, sans-serif; font-weight: 800; font-size: clamp(30px, 3.3vw, 46px); line-height: 1.02; color: #07232b; margin: 0 0 22px; letter-spacing: -0.035em;">Encontre uma célula perto de você</h2>
+        <p style="font-size: 17px; line-height: 1.8; color: #4a463f; margin: 0 0 32px; max-width: 52ch;">Converse conosco após o culto, use a página de Contato ou envie um e-mail. Os líderes conectarão você a uma célula compatível — próxima da sua casa, da sua faixa etária e do seu interesse.</p>
+        <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+          <a href="Contato.dc.html" style="background: #c86b2a; color: #fff; font-family: Archivo, sans-serif; font-weight: 600; font-size: 15px; padding: 15px 28px; border-radius: 999px; text-decoration: none;" style-hover="background: #a4521c; color: #fff;">Quero uma célula</a>
+          <a href="mailto:ipisjbv@gmail.com" style="border: 1.5px solid #07232b; color: #07232b; font-family: Archivo, sans-serif; font-weight: 600; font-size: 15px; padding: 14px 26px; border-radius: 999px; text-decoration: none;" style-hover="background: #07232b; color: #efe8d3;">ipisjbv@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+
+</x-dc>
+</body>
+</html>

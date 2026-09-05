@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #efe8d3; }
+  a { color: #c86b2a; }
+  a:hover { color: #a4521c; }
+</style>
+</helmet>
+<div style="background: #efe8d3; color: #2f2b26; font-family: Karla, system-ui, sans-serif;">
+  <dc-import name="SiteHeader" active="Pastores" hint-size="100%,84px"></dc-import>
+
+  <section style="padding: 20px 24px 0;">
+    <div style="position: relative; max-width: 1240px; margin: 0 auto; background: #07232b; border-radius: 40px; overflow: hidden;">
+      <div style="position: absolute; inset: 0; color: #efe8d3;"><image-slot id="pas-hero" shape="rect" placeholder="Foto da liderança pastoral (16:9)"></image-slot></div>
+      <div style="position: absolute; inset: 0; background: linear-gradient(100deg, rgba(7,35,43,0.86) 0%, rgba(7,35,43,0.62) 55%, rgba(7,35,43,0.24) 100%); pointer-events: none;"></div>
+      <div style="position: relative; padding: clamp(56px, 11vw, 96px) clamp(24px, 6vw, 64px) clamp(64px, 12vw, 104px); pointer-events: none;">
+      <span style="display: inline-block; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #efe8d3; border: 1px solid rgba(239,232,211,0.35); border-radius: 999px; padding: 7px 15px; margin-bottom: 26px;">Pastores</span>
+      <h1 style="font-family: Archivo, sans-serif; font-weight: 800; font-size: clamp(42px, 5.2vw, 74px); line-height: 0.98; letter-spacing: -0.04em; color: #efe8d3; margin: 0 0 20px; max-width: 16ch;">Liderança da igreja</h1>
+      <p style="font-size: 18.5px; line-height: 1.7; color: #cfc6ad; margin: 0; max-width: 58ch;">Os pastores abaixo respondem pela Igreja Presbiteriana Independente em São João da Boa Vista, sob a supervisão da Igreja Mãe em Poços de Caldas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #efe8d3;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 80px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 26px;">
+      <article style="background: #fffdf7; border-radius: 32px; overflow: hidden;">
+        <div style="height: 320px; position: relative; min-width: 0; overflow: hidden;"><image-slot id="pas-sergio" shape="rect" placeholder="Retrato Pr. Sérgio Lima (3:4)"></image-slot></div>
+        <div style="padding: 30px 28px 34px;">
+          <h2 style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 24px; color: #07232b; margin: 0 0 8px;">Pr. Sérgio Lima</h2>
+          <p style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #c86b2a; margin: 0 0 18px; line-height: 1.5;">Pastor na IPI São João da Boa Vista</p>
+          <p style="margin: 0 0 20px; font-size: 15.5px; line-height: 1.75; color: #4a463f;">Casado com Esmarilda e pai de Jefferson e Matheus, o Pastor Sérgio Ferreira de Lima integra a IPI do Brasil desde 1995 e serve na IPI de São João da Boa Vista desde 2018. Com formação teológica pela FATIPI, também atua como advogado nas áreas cível e previdenciária. É apaixonado pelo ministério com células e dedicado à formação e capacitação de novos líderes.</p>
+          <div style="display: flex; flex-direction: column; gap: 8px; font-size: 15px; color: #4a463f; border-top: 1px solid rgba(7,35,43,0.12); padding-top: 18px;">
+            <span>WhatsApp (19) 97167-8294</span>
+            <span>ipisjbv@gmail.com</span>
+          </div>
+        </div>
+      </article>
+      <article style="background: #fffdf7; border-radius: 32px; overflow: hidden;">
+        <div style="height: 320px; position: relative; min-width: 0; overflow: hidden;"><image-slot id="pas-ricardo" shape="rect" placeholder="Retrato Pr. Ricardo Marquesine (3:4)"></image-slot></div>
+        <div style="padding: 30px 28px 34px;">
+          <h2 style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 24px; color: #07232b; margin: 0 0 8px;">Pr. Ricardo Marquesini</h2>
+          <p style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #c86b2a; margin: 0 0 18px; line-height: 1.5;">Pastor Titular na IPI Poços de Caldas (Igreja-mãe)</p>
+          <p style="margin: 0 0 20px; font-size: 15.5px; line-height: 1.75; color: #4a463f;">Membro da IPIB desde 1995, o Pastor Ricardo César Marquesini atua na IPI de Poços de Caldas desde 2007. É casado com Adriana e pai de Ana Júlia e Helena. Formou-se pelo Seminário Teológico Rev. Antônio de Godoy Sobrinho (STAGS) de Londrina. Apaixonado por música, antes do ministério pastoral, atuou como professor de bateria.</p>
+          <div style="display: flex; flex-direction: column; gap: 8px; font-size: 15px; color: #4a463f; border-top: 1px solid rgba(7,35,43,0.12); padding-top: 18px;">
+            <span>WhatsApp (35) 99977-0970</span>
+            <span>ipisjbv@gmail.com</span>
+          </div>
+        </div>
+      </article>
+      <article style="background: #fffdf7; border-radius: 32px; overflow: hidden;">
+        <div style="height: 320px; position: relative; min-width: 0; overflow: hidden;"><image-slot id="pas-walter" shape="rect" placeholder="Retrato Pr. Walter Scherrer (3:4)"></image-slot></div>
+        <div style="padding: 30px 28px 34px;">
+          <h2 style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 24px; color: #07232b; margin: 0 0 8px;">Pr. Walter Scherrer</h2>
+          <p style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #c86b2a; margin: 0 0 18px; line-height: 1.5;">Pastor na IPI Poços de Caldas (Igreja-mãe)</p>
+          <p style="margin: 0 0 20px; font-size: 15.5px; line-height: 1.75; color: #4a463f;">Membro e pastor na IPIB desde janeiro de 1990, quando assumiu o ministério pastoral na IPI de Poços de Caldas, o Pastor Walter Rohr Scherrer é casado com Rose Kerlen e pai de Bruno e Fábio. Graduado em Farmácia e Bioquímica pela Universidade Federal do Espírito Santo (Vitória/ES) em 1979, seguiu seu chamado vocacional e concluiu a formação teológica no Seminário Presbiteriano do Sul (SPS), em Campinas, em 1986.</p>
+          <div style="display: flex; flex-direction: column; gap: 8px; font-size: 15px; color: #4a463f; border-top: 1px solid rgba(7,35,43,0.12); padding-top: 18px;">
+            <span>WhatsApp (35) 99977-0970</span>
+            <span>ipisjbv@gmail.com</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section style="background: #f6f0df;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(40px, 8vw, 84px) 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(32px, 6vw, 64px); align-items: center;">
+      <div>
+        <span style="display: inline-block; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #c86b2a; border: 1px solid rgba(200,107,42,0.4); border-radius: 999px; padding: 7px 15px; margin-bottom: 22px;">Governo da igreja</span>
+        <h2 style="font-family: Archivo, sans-serif; font-weight: 800; font-size: clamp(30px, 3.3vw, 46px); line-height: 1.02; color: #07232b; margin: 0 0 22px; letter-spacing: -0.035em;">Estrutura de liderança</h2>
+        <p style="font-size: 17px; line-height: 1.8; color: #4a463f; margin: 0; max-width: 52ch;">A igreja é governada por uma estrutura presbiteriana: pastores, presbíteros (líderes leigos), diáconos e diaconisas. As decisões são tomadas colegiadamente, buscando sabedoria e consenso sob a guia do Espírito Santo.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;">
+        <div style="background: #fffdf7; border: 1px solid rgba(7,35,43,0.09); border-radius: 24px; padding: 24px;"><h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 17px; color: #07232b; margin: 0;">Pastores</h3><p style="margin: 8px 0 0; font-size: 15px; line-height: 1.6; color: #4a463f;">Ensino, pregação e cuidado pastoral.</p></div>
+        <div style="background: #fffdf7; border: 1px solid rgba(7,35,43,0.09); border-radius: 24px; padding: 24px;"><h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 17px; color: #07232b; margin: 0;">Presbíteros</h3><p style="margin: 8px 0 0; font-size: 15px; line-height: 1.6; color: #4a463f;">Líderes leigos no governo da igreja.</p></div>
+        <div style="background: #fffdf7; border: 1px solid rgba(7,35,43,0.09); border-radius: 24px; padding: 24px;"><h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 17px; color: #07232b; margin: 0;">Diáconos e diaconisas</h3><p style="margin: 8px 0 0; font-size: 15px; line-height: 1.6; color: #4a463f;">Serviço prático, assistência, cuidado e hospitalidade.</p></div>
+        <div style="background: #fffdf7; border: 1px solid rgba(7,35,43,0.09); border-radius: 24px; padding: 24px;"><h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 17px; color: #07232b; margin: 0;">Líderes de Ministério</h3><p style="margin: 8px 0 0; font-size: 15px; line-height: 1.6; color: #4a463f;">Coordenação e cuidado dos ministérios da igreja.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+
+</x-dc>
+</body>
+</html>

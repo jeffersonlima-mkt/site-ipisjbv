@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #efe8d3; }
+  a { color: #c86b2a; }
+  a:hover { color: #a4521c; }
+</style>
+</helmet>
+<div style="background: #efe8d3; color: #2f2b26; font-family: Karla, system-ui, sans-serif;">
+  <dc-import name="SiteHeader" active="Blog" hint-size="100%,84px"></dc-import>
+
+  <section style="padding: 20px 24px 0;">
+    <div style="position: relative; max-width: 1240px; margin: 0 auto; background: #07232b; border-radius: 40px; overflow: hidden;">
+      <div style="position: absolute; inset: 0; color: #efe8d3;"><image-slot id="blog-hero" shape="rect" placeholder="Foto de Bíblia aberta ou estudo (16:9)"></image-slot></div>
+      <div style="position: absolute; inset: 0; background: linear-gradient(100deg, rgba(7,35,43,0.86) 0%, rgba(7,35,43,0.62) 55%, rgba(7,35,43,0.24) 100%); pointer-events: none;"></div>
+      <div style="position: relative; padding: clamp(56px, 11vw, 96px) clamp(24px, 6vw, 64px) clamp(64px, 12vw, 104px); pointer-events: none;">
+      <span style="display: inline-block; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #efe8d3; border: 1px solid rgba(239,232,211,0.35); border-radius: 999px; padding: 7px 15px; margin-bottom: 26px;">Blog</span>
+      <h1 style="font-family: Archivo, sans-serif; font-weight: 800; font-size: clamp(42px, 5.2vw, 74px); line-height: 0.98; letter-spacing: -0.04em; color: #efe8d3; margin: 0 0 20px; max-width: 15ch;">Reflexões de fé</h1>
+      <p style="font-size: 18.5px; line-height: 1.7; color: #cfc6ad; margin: 0; max-width: 58ch;">Reflexão teológica profunda, posicionamentos bíblicos sobre questões contemporâneas e como a Palavra ilumina o dia a dia. Publicações quinzenais.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #efe8d3;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 76px 24px;">
+      <div style="background: #fffdf7; border-radius: 34px; overflow: hidden; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+        <div style="padding: 54px 48px;">
+          <span style="display: inline-block; font-family: Archivo, sans-serif; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #fff; background: #c86b2a; padding: 6px 12px; border-radius: 999px; margin-bottom: 24px;">Em destaque</span>
+          <h2 style="font-family: Archivo, sans-serif; font-weight: 800; font-size: clamp(30px, 3.3vw, 46px); line-height: 1.02; color: #07232b; margin: 0 0 18px; letter-spacing: -0.035em; text-wrap: pretty;">Próxima publicação</h2>
+          <p style="margin: 0 0 26px; font-size: 17px; line-height: 1.8; color: #6d675c; font-style: italic;">[Espaço reservado para o post em destaque — título, resumo de duas linhas, autor e data.]</p>
+          <span style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 15px; color: #c86b2a; border-bottom: 2px solid #c86b2a; padding-bottom: 3px;">Ler o artigo</span>
+        </div>
+        <div style="position: relative; min-width: 0; overflow: hidden; min-height: 340px;">
+          <image-slot id="blog-destaque" shape="rect" placeholder="Imagem do post em destaque (16:9)"></image-slot>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #f6f0df;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 80px 24px;">
+      <span style="display: inline-block; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #c86b2a; border: 1px solid rgba(200,107,42,0.4); border-radius: 999px; padding: 7px 15px; margin-bottom: 22px;">Categorias</span>
+      <h2 style="font-family: Archivo, sans-serif; font-weight: 800; font-size: clamp(30px, 3.3vw, 46px); line-height: 1.02; color: #07232b; margin: 0 0 40px; letter-spacing: -0.035em;">Por onde caminham nossos textos</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px;">
+        <div style="background: #fffdf7; border: 1px solid rgba(7,35,43,0.09); border-radius: 24px; padding: 32px 28px;">
+          <h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 20px; color: #c86b2a; margin: 0 0 12px;">Comportamento Cristão</h3>
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.75; color: #4a463f;">Como viver a fé no trabalho, na família, nos relacionamentos e nas decisões éticas.</p>
+        </div>
+        <div style="background: #fffdf7; border: 1px solid rgba(7,35,43,0.09); border-radius: 24px; padding: 32px 28px;">
+          <h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 20px; color: #c86b2a; margin: 0 0 12px;">Posicionamento Bíblico</h3>
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.75; color: #4a463f;">Política, eleições, guerras e justiça social — à luz da Bíblia.</p>
+        </div>
+        <div style="background: #fffdf7; border: 1px solid rgba(7,35,43,0.09); border-radius: 24px; padding: 32px 28px;">
+          <h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 20px; color: #c86b2a; margin: 0 0 12px;">Teologia Acessível</h3>
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.75; color: #4a463f;">Conceitos reformados, doutrinas e história, sem jargão pesado.</p>
+        </div>
+        <div style="background: #fffdf7; border: 1px solid rgba(7,35,43,0.09); border-radius: 24px; padding: 32px 28px;">
+          <h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 20px; color: #c86b2a; margin: 0 0 12px;">Vida em Família</h3>
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.75; color: #4a463f;">Casamento, filhos, sexualidade e etapas da vida, com base bíblica.</p>
+        </div>
+        <div style="background: #fffdf7; border: 1px solid rgba(7,35,43,0.09); border-radius: 24px; padding: 32px 28px;">
+          <h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 20px; color: #c86b2a; margin: 0 0 12px;">Cristianismo Contemporâneo</h3>
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.75; color: #4a463f;">Ser cristão num mundo digital: redes sociais e disciplina espiritual online.</p>
+        </div>
+        <div style="background: #07232b; border-radius: 24px; padding: 32px 28px; display: flex; flex-direction: column; justify-content: center;">
+          <h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 20px; color: #e79a5e; margin: 0 0 12px;">Tem um tema em mente?</h3>
+          <p style="margin: 0 0 18px; font-size: 15.5px; line-height: 1.75; color: #cfc6ad;">Envie sua pergunta e ela pode virar o próximo texto.</p>
+          <a href="Contato.dc.html" style="color: #efe8d3; font-family: Archivo, sans-serif; font-weight: 600; font-size: 15px; text-decoration: none; border-bottom: 2px solid #c86b2a; align-self: flex-start; padding-bottom: 3px;">Sugerir um tema</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #efe8d3;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 76px 24px;">
+      <h2 style="font-family: Archivo, sans-serif; font-weight: 800; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.05; color: #07232b; margin: 0 0 32px; letter-spacing: -0.03em;">Publicações recentes</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;">
+        <article style="background: #fffdf7; border-radius: 32px; overflow: hidden;">
+          <div style="height: 180px; position: relative; min-width: 0; overflow: hidden;"><image-slot id="blog-p1" shape="rect" placeholder="Imagem do post 1"></image-slot></div>
+          <div style="padding: 24px 24px 28px;">
+            <span style="font-family: Archivo, sans-serif; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #c86b2a;">Categoria · data</span>
+            <h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 20px; color: #07232b; margin: 12px 0 10px;">Título do post</h3>
+            <p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #6d675c; font-style: italic;">[Resumo de duas linhas.]</p>
+          </div>
+        </article>
+        <article style="background: #fffdf7; border-radius: 32px; overflow: hidden;">
+          <div style="height: 180px; position: relative; min-width: 0; overflow: hidden;"><image-slot id="blog-p2" shape="rect" placeholder="Imagem do post 2"></image-slot></div>
+          <div style="padding: 24px 24px 28px;">
+            <span style="font-family: Archivo, sans-serif; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #c86b2a;">Categoria · data</span>
+            <h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 20px; color: #07232b; margin: 12px 0 10px;">Título do post</h3>
+            <p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #6d675c; font-style: italic;">[Resumo de duas linhas.]</p>
+          </div>
+        </article>
+        <article style="background: #fffdf7; border-radius: 32px; overflow: hidden;">
+          <div style="height: 180px; position: relative; min-width: 0; overflow: hidden;"><image-slot id="blog-p3" shape="rect" placeholder="Imagem do post 3"></image-slot></div>
+          <div style="padding: 24px 24px 28px;">
+            <span style="font-family: Archivo, sans-serif; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #c86b2a;">Categoria · data</span>
+            <h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 20px; color: #07232b; margin: 12px 0 10px;">Título do post</h3>
+            <p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #6d675c; font-style: italic;">[Resumo de duas linhas.]</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+
+</x-dc>
+</body>
+</html>

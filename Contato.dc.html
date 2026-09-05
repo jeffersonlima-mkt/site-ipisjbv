@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #efe8d3; }
+  a { color: #c86b2a; }
+  a:hover { color: #a4521c; }
+  input, select, textarea { font-family: Karla, system-ui, sans-serif; font-size: 15.5px; background: #f5f2e8; border: 1px solid #ddd6c4; border-radius: 14px; padding: 13px 16px; color: #2f2b26; width: 100%; box-sizing: border-box; }
+  input:focus, select:focus, textarea:focus { outline: none; border: 2px solid #c86b2a; padding: 11px 13px; }
+  label { font-family: Archivo, sans-serif; font-weight: 600; font-size: 13.5px; color: #07232b; display: block; margin-bottom: 7px; }
+</style>
+</helmet>
+<div style="background: #efe8d3; color: #2f2b26; font-family: Karla, system-ui, sans-serif;">
+  <dc-import name="SiteHeader" active="Contato" hint-size="100%,84px"></dc-import>
+
+  <section style="padding: 20px 24px 0;">
+    <div style="position: relative; max-width: 1240px; margin: 0 auto; background: #07232b; border-radius: 40px; overflow: hidden;">
+      <div style="position: absolute; inset: 0; color: #efe8d3;"><image-slot id="ct-hero" shape="rect" placeholder="Foto da fachada da igreja (16:9)"></image-slot></div>
+      <div style="position: absolute; inset: 0; background: linear-gradient(100deg, rgba(7,35,43,0.86) 0%, rgba(7,35,43,0.62) 55%, rgba(7,35,43,0.24) 100%); pointer-events: none;"></div>
+      <div style="position: relative; padding: clamp(56px, 11vw, 96px) clamp(24px, 6vw, 64px) clamp(64px, 12vw, 104px); pointer-events: none;">
+      <span style="display: inline-block; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #efe8d3; border: 1px solid rgba(239,232,211,0.35); border-radius: 999px; padding: 7px 15px; margin-bottom: 26px;">Contato</span>
+      <h1 style="font-family: Archivo, sans-serif; font-weight: 800; font-size: clamp(42px, 5.2vw, 74px); line-height: 0.98; letter-spacing: -0.04em; color: #efe8d3; margin: 0 0 20px; max-width: 15ch;">Queremos conhecer você</h1>
+      <p style="font-size: 18.5px; line-height: 1.7; color: #cfc6ad; margin: 0; max-width: 58ch;">Use os canais abaixo para tirar dúvidas, solicitar contato, pedir oração ou agendar uma visita.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #efe8d3;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(40px, 8vw, 76px) 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(28px, 6vw, 56px);">
+      <div>
+        <h2 style="font-family: Archivo, sans-serif; font-weight: 800; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.05; color: #07232b; margin: 0 0 28px; letter-spacing: -0.03em;">Localização e dados</h2>
+        <div style="display: flex; flex-direction: column;">
+          <div style="display: grid; grid-template-columns: minmax(90px, 130px) 1fr; gap: 12px 16px; padding: 16px 0; border-top: 1px solid rgba(7,35,43,0.14);">
+            <span style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #c86b2a;">Endereço</span>
+            <span style="font-size: 16px; line-height: 1.6; color: #4a463f;">Rua Irmãos Souza Lima, 79 — Vila Operária, São João da Boa Vista/SP</span>
+          </div>
+          <div style="display: grid; grid-template-columns: minmax(90px, 130px) 1fr; gap: 12px 16px; padding: 16px 0; border-top: 1px solid rgba(7,35,43,0.14);">
+            <span style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #c86b2a;">E-mail</span>
+            <a href="mailto:ipisjbv@gmail.com" style="font-size: 16px;">ipisjbv@gmail.com</a>
+          </div>
+          <div style="display: grid; grid-template-columns: minmax(90px, 130px) 1fr; gap: 12px 16px; padding: 16px 0; border-top: 1px solid rgba(7,35,43,0.14);">
+            <span style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #c86b2a;">WhatsApp</span>
+            <span style="font-size: 16px; line-height: 1.6; color: #4a463f;">(19) 97167-8294 — Pr. Sérgio Lima</span>
+          </div>
+          <div style="display: grid; grid-template-columns: minmax(90px, 130px) 1fr; gap: 12px 16px; padding: 16px 0; border-top: 1px solid rgba(7,35,43,0.14);">
+            <span style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #c86b2a;">PIX</span>
+            <span style="font-size: 16px; line-height: 1.6; color: #4a463f;">ipisjbv@gmail.com</span>
+          </div>
+          <div style="display: grid; grid-template-columns: minmax(90px, 130px) 1fr; gap: 12px 16px; padding: 16px 0; border-top: 1px solid rgba(7,35,43,0.14);">
+            <span style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #c86b2a;">Instagram</span>
+            <span style="font-size: 16px; line-height: 1.6; color: #4a463f;">@presbiteriana.sjbv (local) · @ipidobrasil (nacional)</span>
+          </div>
+          <div style="display: grid; grid-template-columns: minmax(90px, 130px) 1fr; gap: 12px 16px; padding: 16px 0; border-top: 1px solid rgba(7,35,43,0.14); border-bottom: 1px solid rgba(7,35,43,0.14);">
+            <span style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 14px; color: #c86b2a;">Horários</span>
+            <span style="font-size: 16px; line-height: 1.6; color: #4a463f;">Domingos: EBD (Escola Bíblica Dominical) 9h30 e Culto 19h30. Chegue 15 minutos antes para conversar.</span>
+          </div>
+        </div>
+        <p style="margin: 26px 0 0; font-size: 15.5px; line-height: 1.75; color: #4a463f;">Respondemos e-mails em até 48h. O WhatsApp tem melhor resposta em horário comercial — para emergências espirituais, contate a qualquer momento.</p>
+      </div>
+      <div style="position: relative; min-width: 0; overflow: hidden; min-height: clamp(280px, 55vw, 460px);">
+        <image-slot id="ct-mapa" shape="rounded" radius="30" placeholder="Mapa da localização (Google Maps)"></image-slot>
+      </div>
+    </div>
+  </section>
+
+  <section id="formularios" style="background: #f6f0df;">
+    <div style="max-width: 900px; margin: 0 auto; padding: 80px 24px;">
+      <h2 style="font-family: Archivo, sans-serif; font-weight: 800; font-size: clamp(30px, 3.3vw, 46px); line-height: 1.02; color: #07232b; margin: 0 0 10px; letter-spacing: -0.035em;">Formulários</h2>
+      <p style="margin: 0 0 32px; font-size: 17px; line-height: 1.7; color: #4a463f;">Escolha o assunto e envie sua mensagem. Sua solicitação é tratada com confidencialidade.</p>
+
+      <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 28px;">
+        <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="4">
+          <button onClick="{{ t.go }}" style="{{ t.style }}">{{ t.label }}</button>
+        </sc-for>
+      </div>
+
+      <div id="visita" style="{{ panelVisita }}">
+        <form onSubmit="{{ onSubmit }}" style="background: #fffdf7; border-radius: 32px; padding: clamp(24px, 5vw, 40px) clamp(20px, 5vw, 36px); display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+          <div><label for="v-nome">Nome</label><input id="v-nome" name="nome" type="text" placeholder="Seu nome completo"></div>
+          <div><label for="v-email">E-mail</label><input id="v-email" name="email" type="email" placeholder="voce@email.com"></div>
+          <div><label for="v-tel">Telefone</label><input id="v-tel" name="telefone" type="tel" placeholder="(19) 90000-0000"></div>
+          <div><label for="v-primeira">É a sua primeira vez?</label><select id="v-primeira" name="primeira"><option>Sim</option><option>Não</option></select></div>
+          <div style="grid-column: span 2;"><label for="v-msg">Perguntas</label><textarea id="v-msg" name="perguntas" rows="4" placeholder="O que você gostaria de saber antes de vir?"></textarea></div>
+          <div style="grid-column: span 2;"><button type="submit" style="background: #c86b2a; color: #fff; font-family: Archivo, sans-serif; font-weight: 600; font-size: 15.5px; padding: 15px 30px; border: none; border-radius: 999px; cursor: pointer;" style-hover="background: #a4521c;">Agendar visita</button></div>
+        </form>
+      </div>
+
+      <div id="oracao" style="{{ panelOracao }}">
+        <form onSubmit="{{ onSubmit }}" style="background: #fffdf7; border-radius: 32px; padding: clamp(24px, 5vw, 40px) clamp(20px, 5vw, 36px); display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+          <div><label for="o-nome">Nome</label><input id="o-nome" name="nome" type="text" placeholder="Seu nome"></div>
+          <div><label for="o-contato">Deseja contato pessoal?</label><select id="o-contato" name="contato"><option>Sim</option><option>Não</option></select></div>
+          <div style="grid-column: span 2;"><label for="o-sit">Sua situação</label><textarea id="o-sit" name="situacao" rows="5" placeholder="Descreva brevemente o motivo do pedido"></textarea></div>
+          <div style="grid-column: span 2;"><button type="submit" style="background: #c86b2a; color: #fff; font-family: Archivo, sans-serif; font-weight: 600; font-size: 15.5px; padding: 15px 30px; border: none; border-radius: 999px; cursor: pointer;" style-hover="background: #a4521c;">Enviar pedido de oração</button></div>
+        </form>
+      </div>
+
+      <div id="servir" style="{{ panelServir }}">
+        <form onSubmit="{{ onSubmit }}" style="background: #fffdf7; border-radius: 32px; padding: clamp(24px, 5vw, 40px) clamp(20px, 5vw, 36px); display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+          <div><label for="s-nome">Nome</label><input id="s-nome" name="nome" type="text" placeholder="Seu nome completo"></div>
+          <div><label for="s-email">E-mail</label><input id="s-email" name="email" type="email" placeholder="voce@email.com"></div>
+          <div><label for="s-tel">Telefone</label><input id="s-tel" name="telefone" type="tel" placeholder="(19) 90000-0000"></div>
+          <div>
+            <label for="s-min">Ministério de interesse</label>
+            <select id="s-min" name="ministerio" value="{{ ministerio }}" onChange="{{ onMinisterio }}">
+              <option>Acolhimento</option>
+              <option>Ação Social</option>
+              <option>Adolescentes e Jovens</option>
+              <option>Casais</option>
+              <option>Células</option>
+              <option>Ensino / EBD (Escola Bíblica Dominical)</option>
+              <option>Infantil</option>
+              <option>Mídia</option>
+              <option>Música</option>
+              <option>Obras</option>
+              <option>Zeladoria</option>
+            </select>
+          </div>
+          <div style="grid-column: span 2;"><label for="s-disp">Disponibilidade</label><input id="s-disp" name="disponibilidade" type="text" placeholder="Ex.: domingos pela manhã, 2h por mês"></div>
+          <div style="grid-column: span 2;"><label for="s-msg">Mensagem</label><textarea id="s-msg" name="mensagem" rows="4" placeholder="Conte um pouco sobre seus dons e seu interesse"></textarea></div>
+          <div style="grid-column: span 2;"><button type="submit" style="background: #c86b2a; color: #fff; font-family: Archivo, sans-serif; font-weight: 600; font-size: 15.5px; padding: 15px 30px; border: none; border-radius: 999px; cursor: pointer;" style-hover="background: #a4521c;">Cadastre-se para Servir</button></div>
+        </form>
+      </div>
+
+      <div id="duvidas" style="{{ panelDuvidas }}">
+        <form onSubmit="{{ onSubmit }}" style="background: #fffdf7; border-radius: 32px; padding: clamp(24px, 5vw, 40px) clamp(20px, 5vw, 36px); display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+          <div><label for="d-nome">Nome</label><input id="d-nome" name="nome" type="text" placeholder="Seu nome"></div>
+          <div><label for="d-email">E-mail</label><input id="d-email" name="email" type="email" placeholder="voce@email.com"></div>
+          <div style="grid-column: span 2;"><label for="d-assunto">Assunto</label><input id="d-assunto" name="assunto" type="text" placeholder="Sobre o que você quer falar?"></div>
+          <div style="grid-column: span 2;"><label for="d-msg">Mensagem</label><textarea id="d-msg" name="mensagem" rows="5" placeholder="Escreva sua mensagem"></textarea></div>
+          <div style="grid-column: span 2;"><button type="submit" style="background: #c86b2a; color: #fff; font-family: Archivo, sans-serif; font-weight: 600; font-size: 15.5px; padding: 15px 30px; border: none; border-radius: 999px; cursor: pointer;" style-hover="background: #a4521c;">Enviar mensagem</button></div>
+        </form>
+      </div>
+
+      <p style="{{ sentNotice }}">Recebemos sua mensagem. Entraremos em contato em breve.</p>
+    </div>
+  </section>
+
+  <section style="padding: 0 24px 20px;">
+    <div style="max-width: 1240px; margin: 0 auto; background: #07232b; border-radius: 40px; padding: clamp(32px, 7vw, 72px) clamp(24px, 6vw, 64px); display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px;">
+      <div style="border-top: 3px solid #c86b2a; padding-top: 26px;">
+        <h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 22px; color: #efe8d3; margin: 0 0 12px;">@presbiteriana.sjbv</h3>
+        <p style="margin: 0; font-size: 16.5px; line-height: 1.75; color: #cfc6ad;">Instagram local: fotos de cultos, eventos, células e avisos. Acompanhe para estar sempre informado.</p>
+      </div>
+      <div style="border-top: 3px solid rgba(200,107,42,0.45); padding-top: 26px;">
+        <h3 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 22px; color: #efe8d3; margin: 0 0 12px;">@ipidobrasil</h3>
+        <p style="margin: 0; font-size: 16.5px; line-height: 1.75; color: #cfc6ad;">Instagram da IPIB nacional: notícias da denominação, recursos, reflexões e história.</p>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { tab: "visita", sent: false, ministerio: "Acolhimento" };
+
+  componentDidMount() {
+    const raw = (window.location.hash || "").replace("#", "");
+    const [tab, min] = raw.split("=");
+    const next = {};
+    if (["visita", "oracao", "servir", "duvidas"].indexOf(tab) >= 0) next.tab = tab;
+    if (min) next.ministerio = decodeURIComponent(min);
+    if (Object.keys(next).length) this.setState(next);
+    if (min) this._settleScroll("formularios", 0);
+  }
+
+  _settleScroll(id, tries) {
+    const el = document.getElementById(id);
+    if (!el) {
+      if (tries < 30) requestAnimationFrame(() => this._settleScroll(id, tries + 1));
+      return;
+    }
+    const target = Math.max(0, el.getBoundingClientRect().top + window.scrollY - 100);
+    const done = Math.abs(window.scrollY - target) < 4;
+    if (!done) window.scrollTo({ top: target, behavior: tries > 2 ? "smooth" : "auto" });
+    if (tries < 30 && (!done || tries < 8)) {
+      setTimeout(() => this._settleScroll(id, tries + 1), 100);
+    }
+  }
+
+  panel(name) {
+    return this.state.tab === name ? { display: "block" } : { display: "none" };
+  }
+
+  renderVals() {
+    const cur = this.state.tab;
+    const defs = [
+      ["visita", "Agendar visita"],
+      ["oracao", "Pedido de oração"],
+      ["servir", "Cadastro para servir"],
+      ["duvidas", "Dúvidas / contato geral"]
+    ];
+    return {
+      tabs: defs.map(([id, label]) => ({
+        label,
+        go: () => this.setState({ tab: id, sent: false }),
+        style: {
+          fontFamily: "Archivo, sans-serif",
+          fontWeight: 600,
+          fontSize: "14.5px",
+          padding: "12px 20px",
+          borderRadius: "6px",
+          cursor: "pointer",
+          border: cur === id ? "1.5px solid #c86b2a" : "1.5px solid rgba(7,35,43,0.2)",
+          background: cur === id ? "#c86b2a" : "transparent",
+          color: cur === id ? "#fff" : "#07232b"
+        }
+      })),
+      ministerio: this.state.ministerio,
+      onMinisterio: (e) => this.setState({ ministerio: e.target.value }),
+      panelVisita: this.panel("visita"),
+      panelOracao: this.panel("oracao"),
+      panelServir: this.panel("servir"),
+      panelDuvidas: this.panel("duvidas"),
+      onSubmit: (e) => { e.preventDefault(); this.setState({ sent: true }); },
+      sentNotice: {
+        display: this.state.sent ? "block" : "none",
+        margin: "22px 0 0",
+        padding: "16px 20px",
+        borderRadius: "8px",
+        background: "#07232b",
+        color: "#efe8d3",
+        fontSize: "16px"
+      }
+    };
+  }
+}
+
+</script>
+</body>
+</html>

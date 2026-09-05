@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #efe8d3; }
+  a { color: #c86b2a; }
+  a:hover { color: #a4521c; }
+  details > summary { list-style: none; }
+  details > summary::-webkit-details-marker { display: none; }
+  details > summary::after { content: "+"; float: right; color: #c86b2a; font-weight: 600; }
+  details[open] > summary::after { content: "–"; }
+</style>
+</helmet>
+<div style="background: #efe8d3; color: #2f2b26; font-family: Karla, system-ui, sans-serif;">
+  <dc-import name="SiteHeader" active="Informações" hint-size="100%,84px"></dc-import>
+
+  <section style="padding: 20px 24px 0;">
+    <div style="position: relative; max-width: 1240px; margin: 0 auto; background: #07232b; border-radius: 40px; overflow: hidden;">
+      <div style="position: absolute; inset: 0; color: #efe8d3;"><image-slot id="inf-hero" shape="rect" placeholder="Foto do templo ou culto (16:9)"></image-slot></div>
+      <div style="position: absolute; inset: 0; background: linear-gradient(100deg, rgba(7,35,43,0.86) 0%, rgba(7,35,43,0.62) 55%, rgba(7,35,43,0.24) 100%); pointer-events: none;"></div>
+      <div style="position: relative; padding: clamp(56px, 11vw, 96px) clamp(24px, 6vw, 64px) clamp(64px, 12vw, 104px); pointer-events: none;">
+      <span style="display: inline-block; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #efe8d3; border: 1px solid rgba(239,232,211,0.35); border-radius: 999px; padding: 7px 15px; margin-bottom: 26px;">Informações</span>
+      <h1 style="font-family: Archivo, sans-serif; font-weight: 800; font-size: clamp(42px, 5.2vw, 74px); line-height: 0.98; letter-spacing: -0.04em; color: #efe8d3; margin: 0 0 20px; max-width: 16ch;">Perguntas frequentes</h1>
+      <p style="font-size: 18.5px; line-height: 1.7; color: #cfc6ad; margin: 0; max-width: 56ch;">Horários, primeira visita, batismo, contribuição e pedidos de oração. Se não encontrar o que procura, fale conosco.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #efe8d3;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(36px, 7vw, 70px) 24px 30px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px;">
+        <div style="background: #fffdf7; border: 1px solid rgba(7,35,43,0.09); border-radius: 24px; padding: 28px 26px;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#c86b2a" stroke-width="1.8" style="margin-bottom: 14px;"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          <h2 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 18px; color: #c86b2a; margin: 0 0 10px;">Endereço</h2>
+          <p style="margin: 0; font-size: 16px; line-height: 1.7; color: #4a463f;">Rua Irmãos Souza Lima, 79<br>Vila Operária — São João da Boa Vista/SP<br>Estacionamento disponível.</p>
+        </div>
+        <div style="background: #fffdf7; border: 1px solid rgba(7,35,43,0.09); border-radius: 24px; padding: 28px 26px;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#c86b2a" stroke-width="1.8" style="margin-bottom: 14px;"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>
+          <h2 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 18px; color: #c86b2a; margin: 0 0 10px;">Domingos</h2>
+          <p style="margin: 0; font-size: 16px; line-height: 1.7; color: #4a463f;">EBD (Escola Bíblica Dominical): 9h30<br>Culto: 19h30</p>
+        </div>
+        <div style="background: #fffdf7; border: 1px solid rgba(7,35,43,0.09); border-radius: 24px; padding: 28px 26px;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#c86b2a" stroke-width="1.8" style="margin-bottom: 14px;"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+          <h2 style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 18px; color: #c86b2a; margin: 0 0 10px;">Durante a semana</h2>
+          <p style="margin: 0; font-size: 16px; line-height: 1.7; color: #4a463f;">Células nas casas, semanalmente, conforme o seu bairro. Eventos especiais são avisados com antecedência.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #efe8d3;">
+    <div style="max-width: 900px; margin: 0 auto; padding: 50px 24px 80px; display: flex; flex-direction: column; gap: 56px;">
+
+      <div>
+        <h2 style="font-family: Archivo, sans-serif; font-weight: 800; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.05; color: #07232b; margin: 0 0 24px; letter-spacing: -0.03em;">Primeira vez?</h2>
+        <details style="background: #fffdf7; border-radius: 24px; padding: 20px 24px; margin-bottom: 10px;">
+          <summary style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 17px; color: #07232b; cursor: pointer;">O que esperar?</summary>
+          <p style="margin: 14px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Somos conhecidos por ser uma igreja bastante acolhedora. Esperamos te fazer sentir em casa.</p>
+          <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Nossos cultos são Cristocêntricos, ou seja, Jesus Cristo é o centro de tudo que fazemos.</p>
+          <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Momentos de música, palavra e comunhão. Nossas ministrações são sempre fiéis à Palavra de Deus.</p>
+          <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Espere encontrar um grupo de pessoas felizes por sua presença.</p>
+        </details>
+        <details style="background: #fffdf7; border-radius: 24px; padding: 20px 24px; margin-bottom: 10px;">
+          <summary style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 17px; color: #07232b; cursor: pointer;">Preciso ir formal?</summary>
+          <p style="margin: 14px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Venha confortável. Reverência está no coração, não na roupa.</p>
+        </details>
+        <details style="background: #fffdf7; border-radius: 24px; padding: 20px 24px; margin-bottom: 10px;">
+          <summary style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 17px; color: #07232b; cursor: pointer;">Há café depois do culto?</summary>
+          <p style="margin: 14px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Sim! Um tempo de comunhão com café e suco. Ótimo momento para conversar.</p>
+        </details>
+        <details style="background: #fffdf7; border-radius: 24px; padding: 20px 24px;">
+          <summary style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 17px; color: #07232b; cursor: pointer;">Posso trazer filhos?</summary>
+          <p style="margin: 14px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Com certeza. Temos um ministério infantil dedicado. Não acreditamos na ideia de entreter crianças enquanto os adultos recebem alimento espiritual. Aqui seus filhos serão ministrados em sua linguagem. Acreditamos que Deus age por meio das crianças e Sua Palavra também transforma a vida delas.</p>
+        </details>
+      </div>
+
+      <div id="batismo">
+        <h2 style="font-family: Archivo, sans-serif; font-weight: 800; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.05; color: #07232b; margin: 0 0 24px; letter-spacing: -0.03em;">Batismo e profissão de fé</h2>
+        <details style="background: #fffdf7; border-radius: 24px; padding: 20px 24px; margin-bottom: 10px;">
+          <summary style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 17px; color: #07232b; cursor: pointer;">O que é?</summary>
+          <p style="margin: 14px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Ato público de compromisso com Jesus Cristo — símbolo da morte do velho homem e da ressurreição com Cristo.</p>
+        </details>
+        <details style="background: #fffdf7; border-radius: 24px; padding: 20px 24px; margin-bottom: 10px;">
+          <summary style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 17px; color: #07232b; cursor: pointer;">Como pedir?</summary>
+          <p style="margin: 14px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Converse com o pastor após o culto ou use o <a href="Contato.dc.html">formulário de contato</a>. Haverá uma entrevista pastoral para confirmar a fé.</p>
+        </details>
+        <details style="background: #fffdf7; border-radius: 24px; padding: 20px 24px; margin-bottom: 10px;">
+          <summary style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 17px; color: #07232b; cursor: pointer;">A partir de qual idade?</summary>
+          <p style="margin: 14px 0 0; font-size: 16px; line-height: 1.75; color: #6d675c; font-style: italic;">[A definir conforme a prática local — ex.: quando houver profissão madura de fé, geralmente acima de 8 anos.]</p>
+        </details>
+        <details style="background: #fffdf7; border-radius: 24px; padding: 20px 24px; margin-bottom: 10px;">
+          <summary style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 17px; color: #07232b; cursor: pointer;">Quando acontecem os batismos?</summary>
+          <p style="margin: 14px 0 0; font-size: 16px; line-height: 1.75; color: #6d675c; font-style: italic;">[Definir datas — ex.: celebramos 4 vezes ao ano, em domingos designados. Próximo batismo: data.]</p>
+        </details>
+        <details style="background: #fffdf7; border-radius: 24px; padding: 20px 24px;">
+          <summary style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 17px; color: #07232b; cursor: pointer;">Posso ser membro sem batismo?</summary>
+          <p style="margin: 14px 0 0; font-size: 16px; line-height: 1.75; color: #6d675c; font-style: italic;">[Política local — ex.: o batismo é necessário para comungar da Ceia e ter voto em assembleia.]</p>
+        </details>
+      </div>
+
+      <div id="contribuicao">
+        <h2 style="font-family: Archivo, sans-serif; font-weight: 800; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.05; color: #07232b; margin: 0 0 24px; letter-spacing: -0.03em;">Contribuição financeira</h2>
+        <details style="background: #fffdf7; border-radius: 24px; padding: 20px 24px; margin-bottom: 10px;">
+          <summary style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 17px; color: #07232b; cursor: pointer;">Por que devo contribuir?</summary>
+          <p style="margin: 14px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Porque contribuir é uma forma de honrar a Deus com aquilo que Ele nos confiou, reconhecendo que tudo o que temos vem dEle (Provérbios 3:9).</p>
+        </details>
+        <details style="background: #fffdf7; border-radius: 24px; padding: 20px 24px; margin-bottom: 10px;">
+          <summary style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 17px; color: #07232b; cursor: pointer;">Quem deve contribuir?</summary>
+          <p style="margin: 14px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Todo cristão é chamado a contribuir de forma voluntária, generosa e conforme aquilo que Deus colocou em seu coração (2 Coríntios 9:7).</p>
+        </details>
+        <details style="background: #fffdf7; border-radius: 24px; padding: 20px 24px; margin-bottom: 10px;">
+          <summary style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 17px; color: #07232b; cursor: pointer;">Para onde vai o dinheiro?</summary>
+          <div style="margin: 14px 0 0;">
+            <p style="margin: 0 0 12px; font-size: 16px; line-height: 1.75; color: #4a463f;">As contribuições são utilizadas para a manutenção da igreja, o sustento da obra, o cuidado com pessoas e o avanço do Evangelho (Atos 4:34-35; 1 Coríntios 9:14). Os recursos apoiam:</p>
+            <ul style="margin: 0; padding-left: 20px; font-size: 16px; line-height: 1.9; color: #4a463f;">
+              <li>Ações sociais — campanhas, doações, assistência</li>
+              <li>Obras e infraestrutura — manutenção do prédio, equipamentos</li>
+              <li>Custos fixos — água, luz, internet, seguros</li>
+              <li>Missões — apoio a projetos evangelísticos, pastores e missionários</li>
+              <li>Educação — materiais, bolsas, seminários</li>
+            </ul>
+          </div>
+        </details>
+        <details style="background: #fffdf7; border-radius: 24px; padding: 20px 24px; margin-bottom: 10px;">
+          <summary style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 17px; color: #07232b; cursor: pointer;">Com qual valor devo contribuir?</summary>
+          <p style="margin: 14px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Não existe um valor obrigatório. Cada pessoa deve contribuir com alegria, generosidade e conforme sua condição e propósito no coração (2 Coríntios 9:7; 1 Coríntios 16:2).</p>
+        </details>
+        <details style="background: #fffdf7; border-radius: 24px; padding: 20px 24px;">
+          <summary style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 17px; color: #07232b; cursor: pointer;">Como faço para contribuir?</summary>
+          <p style="margin: 14px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">No culto há um espaço para contribuição com dinheiro em espécie ou via PIX.<br>PIX: <strong style="color: #07232b;">ipisjbv@gmail.com</strong></p>
+        </details>
+      </div>
+
+      <div id="oracao">
+        <h2 style="font-family: Archivo, sans-serif; font-weight: 800; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.05; color: #07232b; margin: 0 0 24px; letter-spacing: -0.03em;">Pedidos de oração</h2>
+        <details style="background: #fffdf7; border-radius: 24px; padding: 20px 24px; margin-bottom: 10px;">
+          <summary style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 17px; color: #07232b; cursor: pointer;">Como pedir oração?</summary>
+          <p style="margin: 14px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Fale com qualquer membro durante o culto ou use o <a href="Contato.dc.html#oracao">formulário de oração</a>. Sua solicitação é confidencial.</p>
+        </details>
+        <details style="background: #fffdf7; border-radius: 24px; padding: 20px 24px;">
+          <summary style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 17px; color: #07232b; cursor: pointer;">Vocês visitam enfermos?</summary>
+          <p style="margin: 14px 0 0; font-size: 16px; line-height: 1.75; color: #4a463f;">Sim. Na medida do possível estamos sempre prontos para orar e levar uma palavra para aqueles que precisam de consolo.</p>
+        </details>
+      </div>
+
+    </div>
+  </section>
+
+  <section style="background: #f6f0df;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 70px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px;">
+      <div>
+        <h2 style="font-family: Archivo, sans-serif; font-weight: 800; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.05; color: #07232b; margin: 0 0 10px; letter-spacing: -0.03em;">Não encontrou sua resposta?</h2>
+        <p style="margin: 0; font-size: 17px; line-height: 1.7; color: #4a463f;">Respondemos e-mails em até 48h e o WhatsApp em horário comercial.</p>
+      </div>
+      <a href="Contato.dc.html" style="background: #c86b2a; color: #fff; font-family: Archivo, sans-serif; font-weight: 600; font-size: 15.5px; padding: 16px 30px; border-radius: 999px; text-decoration: none;" style-hover="background: #a4521c; color: #fff;">Fale conosco</a>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+
+</x-dc>
+</body>
+</html>
