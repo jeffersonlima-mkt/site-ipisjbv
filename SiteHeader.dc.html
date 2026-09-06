@@ -19,23 +19,46 @@
 </style>
 </helmet>
 <header style="position: sticky; top: 0; z-index: 60; background: #07232b; font-family: Karla, system-ui, sans-serif;">
-  <div style="max-width: 1240px; margin: 0 auto; padding: clamp(12px, 3vw, 18px) 24px; min-height: 84px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 14px clamp(12px, 3vw, 32px); flex-wrap: wrap;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: clamp(12px, 3vw, 18px) 24px; min-height: 84px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 14px clamp(12px, 3vw, 32px);">
     <a href="Inicio.dc.html" style="display: flex; align-items: center; flex: none;">
       <img src="logo-ipi-branco.png" alt="Presbiteriana Independente" style="height: clamp(32px, 8vw, 42px); width: auto; display: block;">
     </a>
-    <nav style="display: flex; align-items: center; gap: 10px clamp(10px, 2.4vw, 22px); flex-wrap: wrap; justify-content: flex-end;">
+    <nav style="{{ navRowStyle }}">
       <sc-for list="{{ items }}" as="it" hint-placeholder-count="8">
         <a href="{{ it.href }}" style="{{ it.style }}" style-hover="{{ it.hoverStyle }}">{{ it.label }}</a>
       </sc-for>
-      <span style="width: 1px; height: 20px; background: transparent; flex: none;"></span>
     </nav>
+    <button type="button" onClick="{{ toggleMenu }}" aria-label="Abrir menu" style="{{ hamburgerStyle }}">
+      <span style="{{ barStyle1 }}"></span>
+      <span style="{{ barStyle2 }}"></span>
+      <span style="{{ barStyle3 }}"></span>
+    </button>
   </div>
   <div style="height: 1px; background: linear-gradient(to right, rgba(200,107,42,0) 0%, rgba(200,107,42,0.55) 22%, rgba(200,107,42,0.55) 78%, rgba(200,107,42,0) 100%);"></div>
+  <div style="{{ mobileMenuStyle }}">
+    <sc-for list="{{ items }}" as="it2" hint-placeholder-count="8">
+      <a href="{{ it2.href }}" style="{{ it2.mobileStyle }}">{{ it2.label }}</a>
+    </sc-for>
+  </div>
 </header>
 
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;active&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Início&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
 class Component extends DCLogic {
+  state = { isMobile: typeof window !== "undefined" && window.innerWidth < 860, open: false };
+
+  componentDidMount() {
+    this._onResize = () => {
+      const isMobile = window.innerWidth < 860;
+      if (isMobile !== this.state.isMobile) this.setState({ isMobile, open: false });
+    };
+    window.addEventListener("resize", this._onResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this._onResize);
+  }
+
   renderVals() {
     const nav = [
       ["Início", "Inicio.dc.html"],
@@ -48,6 +71,7 @@ class Component extends DCLogic {
       ["Contato", "Contato.dc.html"]
     ];
     const active = this.props.active || "";
+    const { isMobile, open } = this.state;
     return {
       items: nav.map(([label, href]) => {
         const on = label === active;
@@ -66,9 +90,50 @@ class Component extends DCLogic {
             whiteSpace: "nowrap",
             transition: "color 200ms ease, border-color 200ms ease"
           },
-          hoverStyle: on ? {} : { color: "#efe8d3", borderBottomColor: "rgba(239,232,211,0.35)" }
+          hoverStyle: on ? {} : { color: "#efe8d3", borderBottomColor: "rgba(239,232,211,0.35)" },
+          mobileStyle: {
+            display: "block",
+            fontFamily: "Archivo, sans-serif",
+            fontSize: "16px",
+            fontWeight: 600,
+            color: on ? "#efe8d3" : "rgba(239,232,211,0.75)",
+            textDecoration: "none",
+            padding: "14px 24px",
+            borderBottom: "1px solid rgba(239,232,211,0.12)"
+          }
         };
-      })
+      }),
+      navRowStyle: {
+        display: isMobile ? "none" : "flex",
+        alignItems: "center",
+        gap: "10px clamp(10px, 2.4vw, 22px)",
+        flexWrap: "wrap",
+        justifyContent: "flex-end"
+      },
+      hamburgerStyle: {
+        display: isMobile ? "flex" : "none",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: "5px",
+        width: "40px",
+        height: "40px",
+        flex: "none",
+        background: "transparent",
+        border: "none",
+        cursor: "pointer",
+        padding: 0
+      },
+      barStyle1: { width: "22px", height: "2px", background: "#efe8d3", transition: "transform 200ms ease", transform: open ? "translateY(7px) rotate(45deg)" : "none" },
+      barStyle2: { width: "22px", height: "2px", background: "#efe8d3", opacity: open ? 0 : 1, transition: "opacity 200ms ease" },
+      barStyle3: { width: "22px", height: "2px", background: "#efe8d3", transition: "transform 200ms ease", transform: open ? "translateY(-7px) rotate(-45deg)" : "none" },
+      toggleMenu: () => this.setState(s => ({ open: !s.open })),
+      mobileMenuStyle: {
+        display: isMobile && open ? "flex" : "none",
+        flexDirection: "column",
+        background: "#07232b",
+        borderTop: "1px solid rgba(239,232,211,0.12)"
+      }
     };
   }
 }
